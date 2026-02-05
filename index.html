@@ -75,8 +75,8 @@
 
           <!--Start Date field-->
           <div class="field">
-            <label for="compPassword">Start Date:</label>
-            <input type="datetime-local" id="compPassword">
+            <label for="startDate">Start Date:</label>
+			<input type="datetime-local" id="startDate">
           </div>
 
           <!--End Date field-->
@@ -86,305 +86,338 @@
           </div>
         </div>
 
-        <p class="note">Note: All passwords default to P@$$word01</p>
+        <p class="note"><strong>Note:</strong> All passwords default to <strong>P@$$word01</strong></p>
+		
 
     </section>
 
 
 
-    <section class="Username-365">
-      <div class="title">GoCloud Managed Platform Information</div>
-      <div class="reqComp">Requested | Completed</div>
-      <div class="Username-Grid">
-        
-        <!--Requested Completed checkboxes for username-->
-        <div class="field">
+    
+    <!-- GoCloud Managed Platform Information -->
+    <section class="section gocloud">
+      <div class="section-title">GoCloud Managed Platform Information</div>
+      <div class="rc-label" style="transform: translate(-10px,5px);"> Requested | Completed</div>
+
+      <!-- Microsoft 365/Gsuite username -->
+      <div class="row">
+        <div class="rc" style="transform: translateY(2px);">
           <input type="checkbox" id="req365Username">
           <input type="checkbox" id="comp365Username">
         </div>
 
-        <!--Microsoft 365 Username field-->
-        <div class="field">
-          <label for="microsoftUsername">Microsoft 365/Gsuite username:</label>
-          <input type="text" id="microsoftUsername"> 
-        </div>
-        <div class="field">
-          <label for="domain">@</label>
-          <input type="text" id="domain">
-        </div>
-
-        <!--Block Sign-in checkbox-->
-        <div class="field">
-        <input type="checkbox" id="blockSignin">
-        <label for="blockSignin">Block Sign-in</label>
+        <div class="content">
+          <div class="inline">
+            <label for="microsoftUsername" class="label-strong">Microsoft 365/Gsuite username:</label>
+            <input type="text" id="microsoftUsername" class="w-username">
+            <span class="at">@</span>
+            <input type="text" id="domain" class="w-domain">
+            <label class="check-inline">
+              <input type="checkbox" id="blockSignin">
+              <strong>Block Sign-in</strong>
+            </label>
+          </div>
         </div>
       </div>
-    </section>
 
-
-
-    <section class="License-365">
-        <div class="title">Microsoft 365/Gsuite License Options</div>
-        
-        <!--Add | Remove labels-->
-        <div class="addRemove">
-          <div class="txt"><label class="addRemvEmail">Add | Remove</label></div>
-          <div class="txt"><label class="addRemvApps">Add | Remove</label></div>
-          <div class="txt"><label class="addRemvArchive">Add | Remove</label></div>
-          <div class="txt"><label class="addRemvKiosk">Add | Remove</label></div>
+      <!-- Microsoft 365/Gsuite License -->
+      <div class="row">
+        <div class="rc">
+          <input type="checkbox" id="reqLicense">
+          <input type="checkbox" id="compLicense">
         </div>
 
-        <div class= "License-Grid">
-          <!--Requested Completed checkboxes for license-->
-          <div class="field">
-            <input type="checkbox" id="reqLicense">
-            <input type="checkbox" id="compLicense">
+        <div class="content">
+          <div class="ar-headers">
+            <div></div>
+            <div class="ar-head"  style="transform: translateX(-59px);">Add | Remove</div>
+            <div class="ar-head"  style="transform: translateX(-49px);">Add | Remove</div>
+            <div class="ar-head"  style="transform: translateX(-39px);">Add | Remove</div>
+            <div class="ar-head"  style="transform: translateX(-29px);">Add | Remove</div>
           </div>
 
-          <!--Microsoft 365 License checkboxes-->
-          <div class="field"><label>Microsoft 365/Gsuite License (Affects Billing):</label></div>
+          <div class="license-grid">
+            <div class="license-label">
+              <span class="label-strong">Microsoft 365/Gsuite License</span>
+              <span class="muted italic">(Affects billing):</span>
+            </div>
 
-          <!--Email checkboxes-->
-          <div class="field">
-          <input type="checkbox" id="addEmail">
-          <input type="checkbox" id="remvEmail">
-          <label for="addEmail remvEmail">Email</label>
-          </div>
+            <div class="ar-option">
+              <input type="checkbox" id="addEmail">
+              <input type="checkbox" id="remvEmail">
+              <label for="addEmail" class="label-strong">Email</label>
+            </div>
 
-          <!--App Checkboxes-->
-          <div class="field">
-          <input type="checkbox" id="addApps">
-          <input type="checkbox" id="remvApps">
-          <label for="addApps remvApps">Apps</label>
-          </div>
+            <div class="ar-option">
+              <input type="checkbox" id="addApps">
+              <input type="checkbox" id="remvApps">
+              <label for="addApps" class="label-strong">Apps</label>
+            </div>
 
-          <!--Archive Checkboxes-->
-          <div class="field">
-          <input type="checkbox" id="addArchive">
-          <input type="checkbox" id="remvArchive">
-          <label for="addArchive remvArchive">Archive</label>
-          </div>
+            <div class="ar-option">
+              <input type="checkbox" id="addArchive">
+              <input type="checkbox" id="remvArchive">
+              <label for="addArchive" class="label-strong">Archive</label>
+            </div>
 
-          <!--Kiosk Checkboxes-->
-          <div class="field">
-          <input type="checkbox" id="addKiosk">
-          <input type="checkbox" id="remvKiosk">
-          <label for="addKiosk remvKiosk">Kiosk</label>
+            <div class="ar-option">
+              <input type="checkbox" id="addKiosk">
+              <input type="checkbox" id="remvKiosk">
+              <label for="addKiosk" class="label-strong">Kiosk</label>
+            </div>
           </div>
+        </div>
       </div>
-    </section>
 
-    <section class="DistributionList">
-        <!--Requested Completed checkboxes for distribution list-->
-        <input type="checkbox" id="reqList">
-        <input type="checkbox" id="compList">
-
-        Microsoft 365/Gsuite Distribution List Membership
-      <div>Please select/specify which distribution list(s) the employee will join or be removed from.</div>
-      <div>Add | Remove</div>
-
-      <div>
-        <!--Distribution List checkboxes-->
-        <input type="checkbox" id="addList">
-        <input type="checkbox" id="remvList">
-
-        <!--Distribution List Fields-->
-        <input type="text" id="distList">
-        <label for="distList">@</label>
-
-        <!--Distribution Checkbox-->
-        <input type="checkbox" id="distribution">
-        <label for="distribution">Distribution</label>
-
-        <!--Shared Mailbox Checkbox-->
-        <input type="checkbox" id="sharedMbx">
-        <label for="sharedMbx">Shared Mbx</label>
-
-        <!--Alias Checkbox-->
-        <input type="checkbox" id="alias">
-        <label for="alias">Alias</label>
-
+      <!-- Distribution List Membership -->
+      <div class="row">
+        <div class="rc">
+          <input type="checkbox" id="reqList">
+          <input type="checkbox" id="compList">
         </div>
-        <div>
-          <!--REMOVE FROM ALL LIST CHECKBOX-->
-          <input type="checkbox" id="remvAll">
-          <label for="remvAll">REMOVE FROM ALL LISTS</label>
 
+        <div class="content">
+          <div class="label-strong">Microsoft 365/Gsuite Distribution List Membership:</div>
+          <div class="muted italic small-gap" style="margin-bottom: 4px;">Please select/specify which distribution list(s) the employee will join or be removed from.</div>
+
+          <div class="dist-headers">
+            <div class="ar-head" style="transform: translate(-345px, 6px);"> Add | Remove</div>
+            <div></div>
+            <div></div>
+            <div class="ar-head"> </div>
+            <div class="ar-head"> </div>
+            <div class="ar-head"> </div>
+          </div>
+
+          <div class="dist-table">
+            <!-- Row 1 -->
+            <div class="ar-pair" style="transform: translateX(30px);">
+              <input type="checkbox" id="addList1">
+              <input type="checkbox" id="remvList1">
+            </div>
+            <input type="text" id="distList1" class="w-dist">
+            <span class="at">@</span>
+            <label class="check-inline"><input type="checkbox" id="distribution1"><strong>Distribution</strong></label>
+            <label class="check-inline"><input type="checkbox" id="sharedMbx1"><strong>Shared Mbx</strong></label>
+            <label class="check-inline"><input type="checkbox" id="alias1"><strong>Alias</strong></label>
+
+            <!-- Row 2 -->
+            <div class="ar-pair" style="transform: translateX(30px);">
+              <input type="checkbox" id="addList2">
+              <input type="checkbox" id="remvList2">
+            </div>
+            <input type="text" id="distList2" class="w-dist">
+            <span class="at">@</span>
+            <label class="check-inline"><input type="checkbox" id="distribution1"><strong>Distribution</strong></label>
+            <label class="check-inline"><input type="checkbox" id="sharedMbx1"><strong>Shared Mbx</strong></label>
+            <label class="check-inline"><input type="checkbox" id="alias1"><strong>Alias</strong></label>
+
+            <!-- Row 3 -->
+            <div class="ar-pair" style="transform: translateX(30px);">
+              <input type="checkbox" id="addList3">
+              <input type="checkbox" id="remvList3">
+            </div>
+            <input type="text" id="distList3" class="w-dist">
+            <span class="at">@</span>
+            <label class="check-inline"><input type="checkbox" id="distribution1"><strong>Distribution</strong></label>
+            <label class="check-inline"><input type="checkbox" id="sharedMbx1"><strong>Shared Mbx</strong></label>
+            <label class="check-inline"><input type="checkbox" id="alias1"><strong>Alias</strong></label>
+          </div>
+
+          <div class="remove-all">
+            <label class="check-inline label-strong">
+              <input type="checkbox" id="remvAll" style="transform: translateX(111px);">
+              <div class="label-strong" style="transform: translateX(135px)";>REMOVE FROM ALL LISTS</div>
+            </label>
+          </div>
         </div>
-    </section>
+      </div>
 
-    <section class="ConvertSharedMbx">
+      <!-- Convert to Shared Mailbox -->
+      <div class="row">
+        <div class="rc">
           <input type="checkbox" id="reqMbx">
           <input type="checkbox" id="compMbx">
-          Convert to Shared Mbx (50GB Max) and add the following users for access/replies:
-
-        <div>
-          <!--Convert to Shared Mbx field-->
-          <input type="text" id="convMbx">
-          <label for="convMbx">@</label>
-
         </div>
-        <div>
-          <!--Mbx Actions (Enable, Auto-Reply, etc.)-->
+
+        <div class="content">
+          <div class="label-strong">Convert to Shared Mbx (50GB Max) and add the following users for access/replies:</div>
+
+          <div class="inline small-gap">
+            <input type="text" id="mbxUser1Local" class="w-conv">
+            <span class="at">@</span>
+            <input type="text" id="mbxUser2Local" class="w-conv">
+            <span class="at">@</span>
+            <input type="text" id="mbxUser3Local" class="w-conv">
+            <span class="at">@</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Mailbox Actions -->
+      <div class="row">
+        <div class="rc">
           <input type="checkbox" id="reqMbxAction">
           <input type="checkbox" id="compMbxAction">
-          <!--Enable checkbox-->
-          <label for="enable">Enable</label>
-          <input type="checkbox" id="enable">
-          <!--Auto Reply Checkbox-->
-          <label for="autoReply">Auto-Reply(Use additional Notes Below)</label>
-          <input type="checkbox" id="autoReply">
-          <!--Archive checkbox-->
-          <label for="archive">Archive</label>
-          <input type="checkbox" id="archive">
-          <!--Forward to field-->
-          <label for="frwd">Forward to:</label>
-          <input type="text" id="frwd">@
-
         </div>
-    </section>
 
-    <section class="Phone">
-          <!--New Phone and Extension fields-->
+        <div class="content">
+          <div class="inline">
+            <label class="check-inline"><span class="label-strong">Enable</span> <input type="checkbox" id="enable"></label>
+            <label class="check-inline"><span class="label-strong">Auto-Reply</span><span class="muted italic small">(Use Additional Notes below)</span> <input type="checkbox" id="autoReply"></label>
+            <label class="check-inline"><span class="label-strong">Archive</span> <input type="checkbox" id="archive"></label>
+
+            <div class="inline">
+              <span class="label-strong">Forward to</span>
+              <input type="text" id="frwdLocal" class="w-forward">
+              <span class="at">@</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Phone -->
+      <div class="row">
+        <div class="rc">
           <input type="checkbox" id="reqPhone">
           <input type="checkbox" id="compPhone">
-          <!--Number and extension field-->
-          <label for="numbExt">New Phone Number and Extension:</label>
-          <input type="text" id="numbExt">
-
-        <div>
-          <!--Phone Brand and Model field-->
-          <label for="brandModel">Phone set Brand and Model:</label>
-          <input type="text" id="brandModel">
-
         </div>
 
-        <div>
-          <!--Phone Mac Address field-->
-          <label for="macAdd">Phone set MAC Address:</label>
-          <input type="text" id="macAdd">
-
+        <div class="content">
+          <div class="two-col">
+            <div class="label-strong">New Phone Number &amp; Extension:</div>
+            <input type="text" id="numbExt" class="w-wide">
           </div>
-    </section>
 
-    <section class="Computer">
-          <!--New Computer fields-->
+          <div class="two-col">
+            <div class="label-strong">Phone set Brand &amp; Model:</div>
+            <input type="text" id="brandModel" class="w-mid">
+          </div>
+
+          <div class="two-col">
+            <div class="label-strong">Phone set MAC Address:</div>
+            <input type="text" id="macAdd" class="w-mid">
+          </div>
+        </div>
+      </div>
+
+      <!-- Computer -->
+      <div class="row">
+        <div class="rc">
           <input type="checkbox" id="reqComputer">
           <input type="checkbox" id="compComputer">
-          <!--Computer Name field-->
-          <label for="newComputer">New Computer Name:</label>
-          <input type="text" id="newComputer">
-          <!--Type checkboxes-->
-          Type:
-          <!--Laptop-->
-          <input type="checkbox" id="laptop">
-          <label for="laptop">Laptop</label>
-          <!--Tablet-->
-          <input type="checkbox" id="tablet">
-          <label for="tablet">Tablet</label>
-          <!--BYOD-->
-          <input type="checkbox" id="byod">
-          <label for="byod">BYOD</label>
-
-        <div>
-          <!--PC MAC Address/Serial field-->
-          <label for="serialNum">PC MAC Address/Serial:</label>
-          <input type="text" id="serialNum">
-
         </div>
 
-        <div>
-          <!--PC Make/Model-->
-          <label for="pcMakeModel">PC Make/Model:</label>
-          <input type="text" id="pcMakeModel">
+        <div class="content">
+          <div class="inline">
+            <label for="newComputer" class="label-strong">New Computer Name:</label>
+            <input type="text" id="newComputer" class="w-wide" style="width: 314px;">
 
+            <span class="label-strong">Type:</span>
+            <label class="check-inline"><input type="checkbox" id="laptop">Laptop</label>
+            <label class="check-inline"><input type="checkbox" id="tablet">Tablet</label>
+            <label class="check-inline"><input type="checkbox" id="byod">BYOD</label>
           </div>
-    </section>
 
-    <section class="Printer">
-          <!--Printer/MFP fields-->
+          <div class="two-col">
+            <div class="label-strong">PC MAC Address/Serial:</div>
+            <input type="text" id="serialNum" class="w-mid">
+          </div>
+
+          <div class="two-col">
+            <div class="label-strong">PC Make/Model:</div>
+            <input type="text" id="pcMakeModel" class="w-mid">
+          </div>
+        </div>
+      </div>
+
+      <!-- Printer -->
+      <div class="row">
+        <div class="rc">
           <input type="checkbox" id="reqPrinter">
           <input type="checkbox" id="compPrinter">
-          <!--Printer name-->
-          <label for="printMFP">Printer/MFP:</label>
-          <input type="text" id="printMFP">
-          <!--Type checkboxes-->
-          Type:
-          <!--Workgroup-->
-          <input type="checkbox" id="workgroup">
-          <label for="workgroup">Workgroup</label>
-          <!--Tablet-->
-          <input type="checkbox" id="desktop">
-          <label for="desktop">Desktop</label>
-
         </div>
 
-        <div>
-          <!--IP Address field-->
-          <label for="ipAdd">IP Address:</label>
-          <input type="text" id="ipAdd">
+        <div class="content">
+          <div class="inline">
+            <label for="printMFP" class="label-strong">Printer/MFP:</label>
+            <input type="text" id="printMFP" class="w-wide" style="width: 385px;">
 
+            <span class="label-strong">Type:</span>
+            <label class="check-inline"><input type="checkbox" id="workgroup">Workgroup</label>
+            <label class="check-inline"><input type="checkbox" id="desktop">Desktop</label>
           </div>
 
-        <div>
-          <!--Printer Make/Model-->
-          <label for="prntMakeModel">Make/Model:</label>
-          <input type="text" id="prntMakeModel">
-
+          <div class="two-col">
+            <div class="label-strong">IP Address:</div>
+            <input type="text" id="ipAdd" class="w-mid">
           </div>
-    </section>
 
-    <section class="VPNandNAS">
-        <!--VPN ACCESS CHECKBOXES-->
-        <input type="checkbox" id="reqVPN">
-        <input type="checkbox" id="compVPN">
-        VPN Access:
-        <!--Yes and No VPN checks-->
-        <input type="checkbox" id="vpnYes">
-        <label for="vpnYes">Yes</label>
-        <input type="checkbox" id="vpnNo">
-        <label for="vpnNo">No</label>
+          <div class="two-col">
+            <div class="label-strong">Make/Model:</div>
+            <input type="text" id="prntMakeModel" class="w-mid">
+          </div>
+        </div>
+      </div>
 
-      <div>
-        <!--NAS ACCESS CHECKBOXES-->
-        <input type="checkbox" id="reqNAS">
-        <input type="checkbox" id="compNAS">
-        NAS Access:
-        <!--Yes and No NAS checks-->
-        <input type="checkbox" id="nasYes">
-        <label for="vpnYes">Yes</label>
-        <input type="checkbox" id="nasNo">
-        <label for="vpnNo">No</label>
+      <!-- VPN / NAS -->
+      <div class="row">
+        <div class="rc">
+          <input type="checkbox" id="reqVPN">
+          <input type="checkbox" id="compVPN">
+        </div>
 
+        <div class="content">
+          <div class="inline">
+            <span class="label-strong">VPN Access:</span>
+            <label class="check-inline"><input type="checkbox" id="vpnYes">Yes</label>
+            <label class="check-inline"><input type="checkbox" id="vpnNo">No</label>
+          </div>
+
+          <div class="inline small-gap">
+            <span class="label-strong">NAS Access:</span>
+            <label class="check-inline"><input type="checkbox" id="nasYes">Yes</label>
+            <label class="check-inline"><input type="checkbox" id="nasNo">No</label>
+          </div>
+        </div>
       </div>
     </section>
 
-    <section class="AdditionalNotes">
-        Additional Notes:
-      <div>
-        <input type="text" id="Notes">
-      </div>
+    <!-- Additional Notes -->
+    <section class="section notes">
+      <div class="label-strong">Additional Notes:</div>
+      <textarea id="Notes" rows="3"></textarea>
     </section>
 
-    <section class="NonGoCloudInfo">
-        Non-GoCloud Managed Platform Information
-      <div>Requested | Completed</div>
-      <div>
-        <input type="checkbox" id="reqCRM">
-        <input type="checkbox" id="compCRM">
-        <!--CRM/Case Management field-->
-        <label for="crm">CRM / Case Management - Other</label>
-        <input type="text" id="crm">
+    <!-- Non-GoCloud Managed Platform Information -->
+    <section class="section nongocloud">
+      <div class="section-title">Non-GoCloud Managed Platform Information</div>
+      <div class="rc-label" style="transform: translateX(-10px);">Requested | Completed</div>
 
+      <div class="row">
+        <div class="rc">
+          <input type="checkbox" id="reqCRM">
+          <input type="checkbox" id="compCRM">
+        </div>
+        <div class="content">
+          <div class="inline">
+            <label for="crm" class="label-strong">CRM / Case Management - Other</label>
+            <input type="text" id="crm" class="w-wide">
+          </div>
+        </div>
       </div>
 
-      <div>
-        <input type="checkbox" id="reqAcc">
-        <input type="checkbox" id="compAcc">
-        <!--Accounting/Financial field-->
-        <label for="accFin">Accounting / Financial - Other</label>
-        <input type="text" id="accFin">
-
+      <div class="row">
+        <div class="rc">
+          <input type="checkbox" id="reqAcc">
+          <input type="checkbox" id="compAcc">
+        </div>
+        <div class="content">
+          <div class="inline">
+            <label for="accFin" class="label-strong">Accounting / Financial - Other</label>
+            <input type="text" id="accFin" class="w-wide">
+          </div>
+        </div>
       </div>
     </section>
 
